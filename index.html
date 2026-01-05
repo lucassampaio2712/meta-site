@@ -488,26 +488,20 @@
 </div>
 </div>
 </footer>
-<button onclick="abrirChat()" class="fixed bottom-8 right-8 w-16 h-16 bg-[#25D366] text-white rounded-full shadow-[0_4px_20px_rgba(37,211,102,0.4)] flex items-center justify-center z-50 hover:scale-110 transition-transform active:scale-95 group">
-<span class="material-symbols-outlined text-[32px]">chat</span>
-      <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+
 <script>
   window.botpress.init({
     "configUrl": "https://files.bpcontent.cloud/2026/01/05/00/20260105002554-F9X8GNJR.json",
-    "showWidget": false // Mantemos false para que ele só apareça quando clicarem no seu botão customizado
+    "showWidget": false, // Isso esconde o ícone flutuante padrão
+    "layoutWidth": "400px" // Ajusta a largura para parecer com o da foto
   });
-</script>
 
-<script>
-  // Função para abrir o chat ao clicar no seu botão
-  function abrirChat() {
+  // 3. Função que o botão vai chamar
+  function abrirConversaIA(event) {
+    if (event) event.preventDefault(); // Impede a página de recarregar ou pular
     window.botpress.open();
   }
 </script>
-<span class="absolute right-full mr-4 bg-white dark:bg-surface-dark px-4 py-2 rounded-xl text-sm font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0 whitespace-nowrap text-gray-900 dark:text-white pointer-events-none border border-gray-100 dark:border-white/10">
-        Fale com nosso assistente
-    </span>
-</button>
-</div>
 
 </body></html>
