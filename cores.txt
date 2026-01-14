@@ -1,0 +1,10 @@
+
+             colors: {
+              "primary": "#49e619",
+              "primary-hover": "#3cd610",
+              "background-light": "#f8fafc",
+              "background-dark": "#0f170d",
+              "surface-dark": "#1a2618",
+              "surface-card": "#233020",
+              "surface-light": "#ffffff",
+		}
